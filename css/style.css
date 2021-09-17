@@ -40,8 +40,13 @@ body {
   line-height: 16px;
 }
 
-.wrapper {
+.wrapper_sm {
   max-width: 1060px;
+  margin: 0 auto;
+}
+
+.wrapper_lg {
+  max-width: 1260px;
   margin: 0 auto;
 }
 
@@ -121,6 +126,23 @@ body {
   display: flex;
 }
 
+.search_form_field_wrap {
+  display: inline-block;
+  position: relative;
+}
+.search_form_field_wrap::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
 .search_form_field {
   background-color: transparent;
   color: #fff;
@@ -133,9 +155,10 @@ body {
   margin-right: 60px;
   width: 297px;
   padding-left: 43px;
+  position: relative;
 }
 
-.search_form_field::-webkit-placeholder {
+.search_form_field::-webkit-input-placeholder {
   color: #fff;
 }
 
@@ -143,11 +166,11 @@ body {
   color: #fff;
 }
 
-.search_form_field:-ms-placeholder {
+.search_form_field:-ms-input-placeholder {
   color: #fff;
 }
 
-.search_form_field::-ms-placeholder {
+.search_form_field::-ms-input-placeholder {
   color: #fff;
 }
 
@@ -163,3 +186,78 @@ body {
 }
 
 /* intro end */
+/* benefits start */
+.benefits {
+  background-color: #fff;
+  margin-bottom: 131px;
+}
+
+.wrapper_lg-benefits {
+  position: relative;
+  -webkit-box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+          box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+
+.benefits_title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  background-color: #fff;
+  padding: 93px 100px;
+  width: 100%;
+  position: absolute;
+  top: -228px;
+  left: 0;
+  z-index: 10;
+}
+
+.benefits_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px 0 111px 0;
+}
+
+.benefit {
+  margin-right: 55px;
+}
+.benefit:last-child {
+  margin-right: 0;
+  position: relative;
+  top: 8px;
+  left: 0;
+}
+.benefit .benefit_icon {
+  margin-bottom: 37px;
+}
+.benefit .benefit_title {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+.benefit .benefit_description {
+  margin-bottom: 39px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+.benefit .benefit_learn-more {
+  font-size: 16px;
+  line-height: 24px;
+  color: #006DFE;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  padding: 0 59px 0 0;
+  background: url("../img/svg/arrow.svg") no-repeat right center;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.benefit .benefit_learn-more:hover {
+  padding: 0 65px 0 0;
+}
+
+/* benefits end */
