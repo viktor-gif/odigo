@@ -247,9 +247,15 @@
       margin-top: 7px;
     }
   }
-  .places_view_all {
+  .places_view_all_link {
     @include arrowLink;
-    line-height: 300%;
+    position: relative;
+    right: 0;
+    top: 10px;
+    transition: .2s all;
+    &:hover {
+      opacity: .6;
+    }
   }
   .places_cards {
     display: grid;
@@ -310,6 +316,43 @@
     height: 100%;
   }
   /* places end */
+
+  /* tours start */
+  .tours {
+    margin-bottom: 139px; 
+  }
+  .tours_tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 77px;
+  }
+  .tour_pic {
+    width: 100%;
+  }
+  .tour_description {
+    align-self: center;
+    padding-left: 47px;
+  }
+  .tour_description_title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+  }
+  .tour_description_text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 58px;
+    color: #102746;
+  }
+  .tour_description_link {
+    a {
+      @include arrowLink;
+    }
+  }
+
+  /* tours end */
 
 
 
