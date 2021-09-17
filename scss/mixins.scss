@@ -1,0 +1,12 @@
+@mixin arrowLink {
+    font-size: 16px;
+    line-height: 24px;
+    color: $arrowLinkColor;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    padding: 0 59px 0 0;
+    background: url("../img/svg/arrow.svg") no-repeat right center;
+    transition: .3s all;
+    text-decoration: none;
+}

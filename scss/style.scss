@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 /* lato-regular - latin */
 @font-face {
     font-family: 'Lato';
@@ -43,6 +46,9 @@
     line-height: 16px;
     // max-width: 1440px;
     // margin: 0 auto;
+  }
+  img {
+    max-width: 100%;
   }
 
   .wrapper_sm {
@@ -208,15 +214,7 @@
       color: #000;
     }
     .benefit_learn-more {
-      font-size: 16px;
-      line-height: 24px;
-      color: #006DFE;
-      text-transform: uppercase;
-      border: none;
-      background-color: transparent;
-      padding: 0 59px 0 0;
-      background: url("../img/svg/arrow.svg") no-repeat right center;
-      transition: .3s all;
+      @include arrowLink;
       &:hover {
         padding: 0 65px 0 0;
 
@@ -224,3 +222,122 @@
     }
   }
   /* benefits end */
+  /* places start */
+  .places {
+    margin-bottom: 131px;
+  }
+  .places_caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .places_title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    margin-right: 30px;
+    margin-bottom: 36px;
+    &:after {
+      display: block;
+      content: '';
+      width: 253px;
+      height: 3px;
+      background-color: $arrowLinkColor;
+      margin-top: 7px;
+    }
+  }
+  .places_view_all {
+    @include arrowLink;
+    line-height: 300%;
+  }
+  .places_cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+  }
+  .places_card {
+    position: relative;
+    overflow: hidden;
+    transition: .3s all;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: rgba(21, 24, 36, 0.4);
+    }
+    &:hover .places_card_pic {
+      transform: scale(1.1);
+    }
+  }
+  .places_card_lg {
+    grid-column: span 3;
+  }
+  .places_card_sm {
+    grid-column: span 2;
+  }
+
+  .places_card_pic {
+    height: 354px;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s all;
+  }
+  .places_card_pic_small {
+    height: 283px;
+  }
+  .places_card_title {
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+  }
+  .places_card_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+  }
+  /* places end */
+
+
+
+  /* arrow start */
+  .arrow {
+    width: 33px;
+    display: flex;
+    position: relative;
+  }
+  .arrow_line {
+    width: 25px;
+    height: 2px;
+    background-color: #006DFE;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+  .arrow_triangle {
+    height: 0px;
+    width: 0;
+    border: 4px solid transparent;
+    border-left: 8px solid #006DFE;
+    border-right: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  /* arrow end */
+
+   // @mixin name
+  // @include name
