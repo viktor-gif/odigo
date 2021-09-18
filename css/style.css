@@ -449,6 +449,91 @@ img {
 }
 
 /* tours end */
+/* top start */
+.top {
+  margin-bottom: 144px;
+}
+
+.top_places {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 58px 1fr 58px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 58px;
+}
+
+.top_place_img {
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.top_place_description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+  padding-bottom: 43px;
+}
+
+.top_place_link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #006DFE;
+  padding: 12px 19px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top_place_activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+
+.top_place_caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(21, 24, 36, 0.6);
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.top_place_title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.top_place_likes_count {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding-right: 20px;
+  background: url("../img/svg/heart-icon.svg") no-repeat right center;
+}
+
+.top_place_messages_count {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding-right: 23px;
+  background: url("../img/svg/messages-icon.svg") no-repeat right center;
+}
+
+/* top end */
 /* arrow start */
 .arrow {
   width: 33px;
