@@ -65,7 +65,16 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
+  -webkit-transition: 0.5s all linear;
+  transition: 0.5s all linear;
+}
+
+.header_active {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .header_wrapper {
@@ -169,6 +178,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .search_form_field_wrap {
@@ -665,8 +676,8 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     background: rgba(0, 0, 0, 0.9);
-    z-index: 1000000;
     padding: 50px;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -699,7 +710,7 @@ img {
     position: absolute;
     top: 30px;
     right: 20px;
-    z-index: 11;
+    z-index: 111;
   }
 
   .header_nav_close_line {
