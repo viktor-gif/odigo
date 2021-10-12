@@ -628,7 +628,7 @@
       left: 0;
       z-index: 100;
       background: rgb(0, 0, 0, .9);
-      padding: 50px;
+      padding: 70px 50px;
       transform: translateX(100%);
       transition: .2s all linear;
     }
@@ -748,6 +748,12 @@
   }
 
   @media screen and(max-width: 575px) {
+    .header_nav_item {
+      margin-bottom: 20px;
+    }
+    .header_nav_link {
+      font-size: 32px;
+    }
     .intro {
       padding-bottom: 230px;
     }

@@ -1,3 +1,5 @@
+const menu = document.querySelector('.header_nav');
+
 (function () {
     const header = document.querySelector('.header');
     window.onscroll = () => {
@@ -11,7 +13,6 @@
 
 (function () {
     const burger = document.querySelector('.burger');
-    const menu = document.querySelector('.header_nav');
     const smallMenuClose = document.querySelector('.header_nav_close')
     burger.addEventListener('click', () => {
         menu.classList.add('header_nav_active');
@@ -20,6 +21,16 @@
         menu.classList.remove('header_nav_active');
     });
 }());
+
+const removeNav = () => {
+    const navLinks = document.querySelectorAll('.js-nav_item')
+    navLinks.forEach((l) => {
+        console.log(l);
+        l.addEventListener('click', () => {
+            menu.classList.remove('header_nav_active');
+        });
+    });
+}
 
 
 // Scroll to anchors
